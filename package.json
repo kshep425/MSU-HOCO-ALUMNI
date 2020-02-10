@@ -1,0 +1,20 @@
+{
+  "name": "msu-hoco-alumni",
+  "version": "1.0.0",
+  "description": "msu hoco alumni page",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkinnySk8ter/MSU-HOCO-ALUMNI.git"
+  },
+  "author": "Jody J & Keisha S",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SkinnySk8ter/MSU-HOCO-ALUMNI/issues"
+  },
+  "homepage": "https://github.com/SkinnySk8ter/MSU-HOCO-ALUMNI#readme"
+}
