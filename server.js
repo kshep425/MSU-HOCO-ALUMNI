@@ -4,22 +4,25 @@
 // ******************************************************************************
 // *** Dependencies
 // =============================================================
-var express = require("express");
-var session = require("express-session")
+const express = require("express");
+const session = require("express-session")
 // Requiring passport as we've configured it
-var passport = require("./config/passport");
+const passport = require("./config/passport");
+
+// Requiring dotenv for syncing variable
+require("dotenv").config();
+
 // Sets up the Express App
 // =============================================================
 
-// Setting up port and requiring models for syncing
-var PORT = process.env.PORT || 8080;
+// Setting up port
+const PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
-var db = require("./models");
-
+const db = require("./models");
 
 // Creating express app and configuring middleware needed for authentication
-var app = express();
+const app = express();
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -43,7 +46,8 @@ require("./routes/html_routes")(app)
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({ force: true }).then(function () {
+const sync = JSON.parse(process.env.DB_SYNC) || true
+db.sequelize.sync({ force: sync}).then(function () {
     app.listen(PORT, function () {
         console.log("App listening on PORT " + PORT);
     });
