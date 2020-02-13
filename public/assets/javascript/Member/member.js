@@ -14,6 +14,7 @@ class Member {
         this.member_type = member_obj.member_type;
         this.member_marital_status = member_obj.member_marital_status;
         this.payments = member_obj.payments;
+        this.member = member_obj;
     }
 
     get username() { return this.username }
@@ -29,6 +30,10 @@ class Member {
     get member_type() { return this.member_type }
     get member_marital_status() { return this.member_marital_status }
     get payments() { return this.payments }
+
+    register_member(){
+        db_queries.create_member(this.member);
+    }
 };
 
 module.exports = Member;
