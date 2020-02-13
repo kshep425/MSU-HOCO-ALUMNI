@@ -24,11 +24,11 @@ const db_queries = {
         Object.keys(request).forEach(key => {
             if (!request[key]) {
                 delete request[key];
-                fields.fields.push(key)
+                fields.options.fields.push(key)
             }
           });
 
-        db.Member.create(request, fields)
+        return db.Member.create(request, fields)
     }
 }
 

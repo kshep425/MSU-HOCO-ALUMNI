@@ -18,7 +18,7 @@ app.use(express.json());
 module.exports = function(app){
 
     app.post("/api/login", passport.authenticate("local"), function (req, res) {
-                res.json(req.user.username, req.user.full_name);
+                res.json(200, {username: req.user.username, full_name: req.user.full_name});
     });
 
     // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
