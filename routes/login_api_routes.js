@@ -20,7 +20,7 @@ module.exports = function (app) {
                 console.log(member_response)
             })
             .then(function () {
-                res.redirect(307, "/api/login");
+                res.redirect(307, "/");
             })
             .catch(function (err) {
                 res.status(401).json(err);

@@ -3,6 +3,28 @@ const db = require("../models")
 const db_queries = {
 
     create_member: function(req_body){
+        const [request, fields] = this.format_request(req_body)
+        return db.Member.create(request, fields)
+    },
+
+    find_member: function(member_id){
+        return db.Member.findOne({id: member_id})
+    },
+
+    update_member: function(update_request, member_id){
+        const [request] = this.format_request(update_request)
+        return db.Member.update(request, {where: {id: member_id}})
+    },
+
+    delete_member: function(member_id){
+        return db.Member.destroy({id: member_id})
+    },
+
+    get_all_members: function(member_id){
+        return db.Member.find();
+    },
+
+    format_request: function(req_body){
         let fields = {options: {fields: []}};
         console.log("Create Member Called")
         let request = {
@@ -26,9 +48,9 @@ const db_queries = {
                 delete request[key];
                 fields.options.fields.push(key)
             }
-          });
+        });
 
-        return db.Member.create(request, fields)
+        return [request, fields]
     }
 }
 
