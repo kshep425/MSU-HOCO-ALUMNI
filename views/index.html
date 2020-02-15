@@ -8,18 +8,28 @@
     <title>MSU-HOCO Alumni</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
         integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/index.css">
+
 </head>
 
-<body>
+<body style="background-color: skyblue;">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed" style="left: 70%;">
         <a class="pure-menu-heading" href="">DONATE</a>
         <ul class="pure-menu-list">
             <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Events</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Registration</a></li>
         </ul>
     </div>
 
@@ -49,7 +59,7 @@
             quod labore.</p>
     </div>
 
-    <hr>
+    <hr style="background-color: orange;">
 
     <div class="container">
         <h3>Events</h3>
@@ -69,32 +79,56 @@
                         class="d-block w-100" alt="...">
                 </div>
             </div>
+        </div>
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nesciunt accusantium
                 labore quasi, error atque velit vitae cumque aliquid? Distinctio sed ab beatae fuga minima facilis quia
                 ea cupiditate nobis?</p>
-        </div>
-
-        <div id="event_form">
-            <div class="event">
-                <form class="pure-form">
-                    <fieldset class="pure-group" id="contact_info">
-                        <input id="name" type="text" class="pure-input-1-2" placeholder="Name">
-                        <input id="phone" type="email" class="pure-input-1-2" placeholder="Phone">
-                        <input id="email" type="email" class="pure-input-1-2" placeholder="Email">
-                    </fieldset>
-
-                    <fieldset class="pure-group">
-                        <input id="date" type="text" class="pure-input-1-2" placeholder="Date">
-                        <textarea id="description" class="pure-input-1-2" placeholder="Event Description"></textarea>
-                    </fieldset>
-
-                    <button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Submit</button>
-                </form>
-            </div>
-        </div>
-
+        
     </div>
-    <hr>
+
+    <div class="eventform">
+        <p>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Register Event!
+            </button>
+
+        </p>
+        <div class="collapse" id="collapseExample">
+            <div id="event_form">
+                <div class="event">
+                    <form class="pure-form">
+                        <fieldset class="pure-group" id="contact_info">
+                            <label for="email">Name</label>
+                            <input id="name" type="text" class="pure-input-1-2">
+
+                            <label for="email">Phone</label>
+                            <input id="phone" type="email" class="pure-input-1-2">
+
+                            <label for="email">Email</label>
+                            <input id="email" type="email" class="pure-input-1-2">
+                        </fieldset>
+
+                        <fieldset class="pure-group">
+                            <label for="email">Date</label>
+                            <input id="date" type="text" class="pure-input-1-2">
+
+                            <label for="email">Event Description</label>
+                            <textarea id="description" class="pure-input-1-2"></textarea>
+                        </fieldset>
+                        <!-- button should send event info to an administrator for approval. User should get a notification saying event has been sent for approval -->
+                        <button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr style="background-color: orange;">
+
+    
+
+    
 
 </body>
 
