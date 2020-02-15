@@ -1,0 +1,57 @@
+const db = require("../models")
+
+const db_queries = {
+
+    create_member: function(req_body){
+        const [request, fields] = this.format_request(req_body)
+        return db.Member.create(request, fields)
+    },
+
+    find_member: function(member_id){
+        return db.Member.findOne({id: member_id})
+    },
+
+    update_member: function(update_request, member_id){
+        const [request] = this.format_request(update_request)
+        return db.Member.update(request, {where: {id: member_id}})
+    },
+
+    delete_member: function(member_id){
+        return db.Member.destroy({id: member_id})
+    },
+
+    get_all_members: function(member_id){
+        return db.Member.find();
+    },
+
+    format_request: function(req_body){
+        let fields = {options: {fields: []}};
+        console.log("Create Member Called")
+        let request = {
+            username: req_body.username,
+            password: req_body.password,
+            full_name: req_body.full_name,
+            email: req_body.email,
+            prefix: req_body.prefix,
+            suffix: req_body.suffix,
+            phone: req_body.phone,
+            street_address: req_body.street_address,
+            city: req_body.city,
+            state: req_body.state,
+            zip: req_body.zip,
+            occupation: req_body.occupation,
+            member_type: req_body.member_type,
+            member_marital_status: req_body.member_marital_status
+        };
+        Object.keys(request).forEach(key => {
+            if (!request[key]) {
+                delete request[key];
+                fields.options.fields.push(key)
+            }
+        });
+
+        return [request, fields]
+    }
+}
+
+module.exports = db_queries;
