@@ -51,7 +51,38 @@ const db_queries = {
         });
 
         return [request, fields]
+    },
+
+    /**
+     * Add a degree
+     * @param {*} req_body Should be a object {memberId: val, degree: val, year: val}
+     */
+    add_degree: function(req_body){
+        console.log(req_body)
+        return db.Degree.create(req_body)
+    },
+
+    all_degrees: function(){
+        return db.Degree.find();
+    },
+
+    find_member_degrees: function(member_id){
+        return db.Degree.findOne({where: {MemberId: member_id}})
+    },
+    /**
+     *
+     * @param {*} degree_id
+     * @param {*} degree_info {degree: val, year: val, MemberId: val}
+     */
+    update_member_degree: function(degree_id, degree_info){
+        return db.Degree.update(degree_info, {where: {id: degree_id}})
+    },
+
+    delete_member_degree: function(degree_id){
+        return db.Degree.destroy({where: {id: degree_id}})
     }
+
+
 }
 
 module.exports = db_queries;

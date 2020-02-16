@@ -15,9 +15,24 @@ module.exports = function (app) {
     // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
     // otherwise send back an error
     app.post("/api/register", function (req, res) {
-        db_queries.create_member(req.body)
+        const member_info = req.body
+        db_queries.create_member(member_info)
             .then(function (member_response) {
-                console.log(member_response)
+                for(let i=0; i < member_info.degree.length; i++){
+                    vals = Object.values(member_info.degree[i])
+                    if(vals[0] && vals[1]){
+                        member_info.degree[i]["MemberId"] = member_response.dataValues.id;
+                        console.log(member_info)
+                        db_queries.add_degree(member_info.degree[i])
+                        .then((result)=>{
+                            console.log("Degree Added")
+                            console.log(result)
+                        })
+                        .catch((err)=>{
+                            console.log(err)
+                        })
+                    }
+                }
             })
             .then(function () {
                 res.redirect(307, "/");
