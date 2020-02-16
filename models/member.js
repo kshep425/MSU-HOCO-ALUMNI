@@ -28,10 +28,12 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING
         },
         // Home Address
-        street_address: {
+        street_address_1: {
             type: DataTypes.STRING
         },
-
+        street_address_2: {
+            type: DataTypes.STRING
+        },
         city: DataTypes.STRING,
         state: DataTypes.STRING,
         zip: DataTypes.INTEGER(5),
