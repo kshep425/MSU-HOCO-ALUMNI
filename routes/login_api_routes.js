@@ -19,6 +19,7 @@ module.exports = function (app) {
         const member_info = req.body
         db_queries.create_member(member_info)
             .then(function (member_response) {
+                console.log("Add Degree")
                 for(let i=0; i < member_info.degree.length; i++){
                     vals = Object.values(member_info.degree[i])
                     if(vals[0] && vals[1]){
@@ -30,6 +31,7 @@ module.exports = function (app) {
                             console.log(result)
                         })
                         .catch((err)=>{
+                            console.log("Create Member Failed")
                             console.log(err)
                         })
                     }
