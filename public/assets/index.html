@@ -2,43 +2,260 @@
 <html lang="en">
 
 <head>
-    <title></title>
+
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/assets/css/index.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MSU-HOCO Alumni</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+        integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/index.css">
+
 </head>
 
-<body>
-    <h1>Morgan State University Howard County Alumni</h1>
-    <form action="/api/register" method="post">
+<body style="background-color: skyblue;">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed" style="left: 70%;">
+        <a class="pure-menu-heading" href="">DONATE</a>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Events</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Registration</a></li>
+        </ul>
+    </div>
+
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Morgan State University Howard County Alumni</h1>
+            <p class="lead">A Place to keep up with our current events!</p>
+        </div>
+    </div>
+
+    <!-- <div class="pure-menu pure-menu-horizontal">
+            donate button should be in a fixed position throughout the page
+            <a href="#" class="pure-menu-heading pure-menu-link">DONATE</a>
+            <ul class="pure-menu-list">
+                have the links maybe go to the actual parts of page instead of scrolling down
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Top</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Events</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Registration</a></li>
+            </ul>
+        </div> -->
+
+    <div class="container">
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis earum in provident incidunt enim.
+            Architecto officia nesciunt nam voluptatibus dolores dolor beatae nobis eum numquam repellat, nisi ipsam
+            quod labore.</p>
+    </div>
+
+    <hr style="background-color: orange;">
+
+    <div class="container">
+        <h3>Events</h3>
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://news.morgan.edu/wp-content/uploads/news-SPrating-660x330.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://pbs.twimg.com/profile_images/961705793191112704/y3QjIHWn_400x400.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.hfurrer.com/wp-content/uploads/2017/11/msu_north_garage_nite-2-web.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nesciunt accusantium
+            labore quasi, error atque velit vitae cumque aliquid? Distinctio sed ab beatae fuga minima facilis quia
+            ea cupiditate nobis?</p>
+
+    </div>
+
+    <div class="eventform">
+        <p>
+            <button class=" btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Register Event!
+            </button>
+
+        </p>
+        <div class="collapse" id="collapseExample">
+            <div id="event_form">
+                <div class="event">
+                    <form class="pure-form">
+                        <fieldset class="pure-group" id="contact_info">
+                            <label for="email">Name</label>
+                            <input id="name" type="text" class="pure-input-1-2">
+
+                            <label for="email">Phone</label>
+                            <input id="phone" type="email" class="pure-input-1-2">
+
+                            <label for="email">Email</label>
+                            <input id="email" type="email" class="pure-input-1-2">
+                        </fieldset>
+
+                        <fieldset class="pure-group">
+                            <label for="email">Date</label>
+                            <input id="date" type="text" class="pure-input-1-2">
+
+                            <label for="email">Event Description</label>
+                            <textarea id="description" class="pure-input-1-2"></textarea>
+                        </fieldset>
+                        <!-- button should send event info to an administrator for approval. User should get a notification saying event has been sent for approval -->
+                        <button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <hr style="background-color: orange;">
+
+
+
+
+
+
+
+
+
+    <form class="login" action="/api/register" method="post">
+
+
         <p>Username</p>
         <input id="username" type="text">
         <p>password</p>
         <input id="password" type="password">
-        <p>Full Name</p>
-        <input id="full_name" type="text">
-        <p>Email</p>
-        <input id="email" type="email">
-        <p>Graduation Year</p>
-        <input id="gradYear1"class="gradYear" type="text">
-        <p>Graduation Major</p>
-        <input id="gradYear1" class="gradMajor" type="text">
-        <button id=register_btn>Register</button>
-        <p>Graduation Year</p>
-        <input id="gradYear2" class="gradYear" type="text">
-        <p>Graduation Major</p>
-        <input id="gradYear2" class="gradMajor" type="text">
-        <button id=register_btn>Register</button>
-        <p>Graduation Year</p>
-        <input id="gradYear3" class="gradYear" type="text">
-        <p>Graduation Major</p>
-        <input id="gradYear3" class="gradMajor" type="text">
-        <button id=register_btn>Register</button>
+        <!-- <p>Full Name</p>
+    <input id="full_name" type="text">
+    <p>Email</p>
+    <input id="email" type="email">
+    <p>Graduation Year</p>
+    <input id="gradYear1" class="gradYear" type="text">
+    <p>Graduation Major</p>
+    <input id="gradYear1" class="gradMajor" type="text">
+    <button id=register_btn>Register</button>
+    <p>Graduation Year</p>
+    <input id="gradYear2" class="gradYear" type="text">
+    <p>Graduation Major</p>
+    <input id="gradYear2" class="gradMajor" type="text">
+    <button id=register_btn>Register</button>
+    <p>Graduation Year</p>
+    <input id="gradYear3" class="gradYear" type="text">
+    <p>Graduation Major</p>
+    <input id="gradYear3" class="gradMajor" type="text"> -->
+        <!-- <button id=register_btn>Register</button> -->
+
+
     </form>
-    <button id=login_btn>Log In</button>
-    <button id=logout_btn>Log Out</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+        Register
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalScrollableTitle">Registration Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Full Name</p>
+                    <input id="full_name" type="text">
+                    <p>Email</p>
+                    <input id="email" type="email">
+                    <p>Username</p>
+                    <input id="username" type="text">
+                    <p>password</p>
+                    <input id="password" type="password">
+                    <p>Graduation Year</p>
+                    <input id="gradYear1" class="gradYear" type="text">
+                    <p>Graduation Major</p>
+                    <input id="gradMajor1" class="gradMajor" type="text">
+                    <button class=" btn-primary" type="button" data-toggle="collapse" data-target="#addgrad"
+                        aria-expanded="false" aria-controls="addgrad">
+                        Add
+                    </button>
+                    <br>
+                    <div class="collapse" id="addgrad">
+                        <div id="event_form">
+                            <div class="event">
+                                <form class="pure-form">
+                                    <fieldset class="pure-group" id="contact_info">
+                                        <label for="gradYear2">Graduation Year</label>
+                                        <input id="gradYear2" type="text" class="pure-input-1-2">
+                                        <label for="email">Graduation Major</label>
+                                        <input id="gradMajor2" type="text" class="pure-input-1-2">
+                                        <button class=" btn-primary" type="button" data-toggle="collapse"
+                                            data-target="#addanother" aria-expanded="false" aria-controls="addanother">
+                                            Add
+                                        </button>
+                                        <br>
+                                        <div class="collapse" id="addanother">
+                                            <div id="event_form">
+                                                <div class="event">
+                                                    <form class="pure-form">
+                                                        <fieldset class="pure-group" id="contact_info">
+                                                            <label for="gradYear3">Graduation Year</label>
+                                                            <input id="gradYear3" type="text" class="pure-input-1-2">
+                                                            <label for="gradMajor3">Graduation Major</label>
+                                                            <input id="gradYMajor3" type="text" class="pure-input-1-2">
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- <p>Graduation Year</p>
+                    <input id="gradYear2" class="gradYear" type="text">
+                    <p>Graduation Major</p>
+                    <input id="gradYear2" class="gradMajor" type="text">
+                    <button id=register_btn>Register</button>
+                    <p>Graduation Year</p>
+                    <input id="gradYear3" class="gradYear" type="text">
+                    <p>Graduation Major</p> -->
+                    <!-- <input id="gradYear3" class="gradMajor" type="text"> -->
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class=" btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" id="register_btn" class=" btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn" id=login_btn>Log In</button>
+    <button class="btn" id=logout_btn>Log Out</button>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
-     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="/assets/javascript/Member/member.js">
     </script>
     <script src="/assets/javascript/index.js">

@@ -1,0 +1,22 @@
+.jumbotron {
+    background-color: orange;
+};
+.carousel {
+    width: 300px;
+    height: 300px;
+}
+
+.carousel-item {
+    width: 400pxx;
+    height: 360px;
+}
+
+.login {
+    position: relative;
+    left: 45%;
+}
+
+.btn {
+    position: relative;
+    left: 45%;
+}
