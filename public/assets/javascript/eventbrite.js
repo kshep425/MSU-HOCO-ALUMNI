@@ -6,9 +6,9 @@ $(document).ready(() => {
         let event_info = get_event_info()
         console.log(event_info)
         $.ajax({
-             url: "api/register",
+             url: "/api/submit_event",
              method: "POST",
-             body: event_info,
+             data: event_info,
         })
         .then((result) => {
              location.href = "/"
