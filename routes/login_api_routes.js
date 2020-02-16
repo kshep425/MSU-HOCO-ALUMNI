@@ -7,6 +7,7 @@ const passport = require("../config/passport");
 module.exports = function (app) {
 
     app.post("/api/login", passport.authenticate("local"), function (req, res) {
+        console.log("Login Registered User: " + req.user.username)
         res.status(200)
             .json({ username: req.user.username, full_name: req.user.full_name });
     });

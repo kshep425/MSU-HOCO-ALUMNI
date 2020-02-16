@@ -43,6 +43,7 @@ app.use(passport.session());
 
 require("./routes/login_api_routes")(app)
 require("./routes/html_routes")(app)
+require("./routes/event_routes")(app)
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

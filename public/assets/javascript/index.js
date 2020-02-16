@@ -70,3 +70,11 @@ $(document).ready(() => {
             })
     })
 })
+$(function () {
+    $('#datetimepicker1').datetimepicker();
+});
+$(function () {
+    $('#datetimepicker3').datetimepicker({
+        format: 'LT'
+    });
+});
