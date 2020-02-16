@@ -19,8 +19,18 @@ $(document).ready(() => {
                     degree: $("#gradMajor3").val(),
                     year: $("#gradYear3").val()
                 },
-            ]
-
+            ],
+            street_address_1: $("#inputAddress").val(),
+            street_address_2: $("#inputAddress2").val(),
+            city: $("#inputCity").val(),
+            state: $("#inputState option:selected").attr("value"),
+            zip: $("#inputZip").val(),
+            occupation: $().val(),
+            member_type: $().val(),
+            member_marital_status: $().val(),
+            phone: $("#inputPhone").val(),
+            prefix: $().val(),
+            suffix: $().val()
         }
         register_member(member_obj)
         $("h1").text("Registration Submitted")
@@ -69,4 +79,5 @@ $(document).ready(() => {
                 console.log(err)
             })
     })
+
 })
