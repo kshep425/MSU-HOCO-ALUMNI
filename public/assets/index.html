@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MSU-HOCO Alumni</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -22,18 +23,48 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
         integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/index.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 
 <body style="background-color: skyblue;">
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed" style="left: 70%;">
-        <a class="pure-menu-heading" href="">DONATE</a>
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Events</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Registration</a></li>
-        </ul>
-    </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    Home
+                </li>
+                <li class="nav-item donatetab">
+                    Donate
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-primary reg-btn" data-toggle="modal"
+                        data-target="#exampleModalScrollable">
+                        Register
+                    </button>
+
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <p style="position: relative;right: 40px;top: 10px;">Username</p>
+                <input style="position: relative;right: 30px;" id="login_username" autocomplete="username" type="text">
+                <p style="position: relative;right: 20px;top: 10px;" >Password</p>
+                <input style="position: relative;right: 15px;" id="login_password" autocomplete="password" type="password">
+
+                <button class=" btn btn-primary" id=login_btn>Log In</button>
+            </form>
+        </div>
+    </nav>
 
 
     <div class="jumbotron jumbotron-fluid">
@@ -43,16 +74,7 @@
         </div>
     </div>
 
-    <!-- <div class="pure-menu pure-menu-horizontal">
-            donate button should be in a fixed position throughout the page
-            <a href="#" class="pure-menu-heading pure-menu-link">DONATE</a>
-            <ul class="pure-menu-list">
-                have the links maybe go to the actual parts of page instead of scrolling down
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Top</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Events</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Registration</a></li>
-            </ul>
-        </div> -->
+
 
     <div class="container">
         <h2>About</h2>
@@ -88,10 +110,10 @@
 
     </div>
 
-    <div class="eventform">
+    <div class="eventform" style="position: relative; left: 30%;">
         <p>
-            <button class=" btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
-                aria-expanded="false" aria-controls="collapseExample">
+            <button style="position: relative;left: 15%;" class=" btn-primary" type="button" data-toggle="collapse"
+                data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                 Add New Event!
             </button>
 
@@ -103,21 +125,51 @@
                         <fieldset class="pure-group" id="contact_info">
                             <label for="event_name">Event Name</label>
                             <input id="event_name" type="text" class="pure-input-1-2">
-
-                            <label for="event_phone">Phone</label>
-                            <input id="phone" type="email" class="pure-input-1-2">
-
-                            <label for="event_email">Email</label>
-                            <input id="event_email" type="email" class="pure-input-1-2">
-                        </fieldset>
-
-                        <fieldset class="pure-group">
-                            <label for="event_date">Date</label>
-                            <input id="event_date" type="text" class="pure-input-1-2">
-
                             <label for="event_description">Event Description</label>
                             <textarea id="event_description" class="pure-input-1-2"></textarea>
+                            <!-- <label for="event_date">Date</label>
+                            <input id="event_date" type="text" class="pure-input-1-2"> -->
+
+                            <!-- <div class="container"> -->
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="startlabel" for="datetimepicker1">Start Time and Date</label>
+                                        <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input event_start"
+                                                data-target="#datetimepicker1" />
+                                            <div class="input-group-append" data-target="#datetimepicker1"
+                                                data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="container"> -->
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="endlabel" for="datetimepicker3 ">End Time and Date</label>
+                                            <div class="input-group date2" id="datetimepicker3"
+                                                data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input event_end"
+                                                    data-target="#datetimepicker3" />
+                                                <div class="input-group-append" data-target="#datetimepicker3"
+                                                    data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
                         </fieldset>
+                        <br>
                         <!-- button should send event info to an administrator for approval. User should get a notification saying event has been sent for approval -->
                         <button id="event_submit_btn" type="submit"
                             class="pure-button pure-input-1-2 pure-button-primary">Submit Event</button>
@@ -128,7 +180,7 @@
         </div>
     </div>
     <hr style="background-color: orange;">
-    <form class="login" action="/api/register" method="post">
+    <!-- <form class="login" action="/api/register" method="post">
 
 
         <p>Username</p>
@@ -136,8 +188,9 @@
         <p>password</p>
         <input id="login_password" autocomplete="password" type="password">
 
-    </form>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+    </form> -->
+    <button type="button" class="btn btn-primary register-btn" data-toggle="modal"
+        data-target="#exampleModalScrollable">
         Register
     </button>
 
@@ -206,8 +259,6 @@
             </div>
         </div>
     </div>
-    <button class="btn" id=login_btn>Log In</button>
-    <button class="btn" id=logout_btn>Log Out</button>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="/assets/javascript/index.js"></script>
