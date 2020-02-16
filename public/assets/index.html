@@ -101,25 +101,26 @@
                 <div class="event">
                     <form class="pure-form">
                         <fieldset class="pure-group" id="contact_info">
-                            <label for="email">Name</label>
-                            <input id="name" type="text" class="pure-input-1-2">
+                            <label for="event_name">Event Name</label>
+                            <input id="event_name" type="text" class="pure-input-1-2">
 
-                            <label for="email">Phone</label>
+                            <label for="event_phone">Phone</label>
                             <input id="phone" type="email" class="pure-input-1-2">
 
-                            <label for="email">Email</label>
-                            <input id="email" type="email" class="pure-input-1-2">
+                            <label for="event_email">Email</label>
+                            <input id="event_email" type="email" class="pure-input-1-2">
                         </fieldset>
 
                         <fieldset class="pure-group">
-                            <label for="email">Date</label>
-                            <input id="date" type="text" class="pure-input-1-2">
+                            <label for="event_date">Date</label>
+                            <input id="event_date" type="text" class="pure-input-1-2">
 
-                            <label for="email">Event Description</label>
-                            <textarea id="description" class="pure-input-1-2"></textarea>
+                            <label for="event_description">Event Description</label>
+                            <textarea id="event_description" class="pure-input-1-2"></textarea>
                         </fieldset>
                         <!-- button should send event info to an administrator for approval. User should get a notification saying event has been sent for approval -->
-                        <button type="submit" class="pure-button pure-input-1-2 pure-button-primary">Submit Event</button>
+                        <button id="event_submit_button" type="submit"
+                            class="pure-button pure-input-1-2 pure-button-primary">Submit Event</button>
                     </form>
                 </div>
             </div>
@@ -131,9 +132,9 @@
 
 
         <p>Username</p>
-        <input id="username" autocomplete="username" type="text">
+        <input id="login_username" autocomplete="username" type="text">
         <p>password</p>
-        <input id="password" autocomplete="password" type="password">
+        <input id="login_password" autocomplete="password" type="password">
 
     </form>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
@@ -152,60 +153,55 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Full Name</p>
-                    <input id="full_name" type="text">
-                    <p>Email</p>
-                    <input id="email" type="email">
-                    <p>Username</p>
-                    <input id="username" type="text">
-                    <p>password</p>
-                    <input id="password" type="password">
-                    <p>Graduation Year</p>
-                    <input id="gradYear1" class="gradYear" type="text">
-                    <p>Graduation Major</p>
-                    <input id="gradMajor1" class="gradMajor" type="text">
-                    <button class=" btn-primary" type="button" data-toggle="collapse" data-target="#addgrad"
-                        aria-expanded="false" aria-controls="addgrad">
-                        Add
-                    </button>
+                    <form>
+
+                        <p>Full Name</p>
+                        <input id="full_name" type="text">
+                        <p>Email</p>
+                        <input id="email" type="email" autocomplete="username">
+                        <p>Username</p>
+                        <input id="username" type="text" autocomplete="username">
+                        <p>password</p>
+                        <input id="password" type="password" autocomplete="password">
+                        <p>Graduation Year</p>
+                        <input id="gradYear1" class="gradYear" type="text">
+                        <p>Graduation Major</p>
+                        <input id="gradMajor1" class="gradMajor degree" type="text">
+                        <button class=" btn-primary" type="button" data-toggle="collapse" data-target="#addgrad"
+                            aria-expanded="false" aria-controls="addgrad">
+                            Add
+                        </button>
+                    </form>
                     <br>
                     <div class="collapse" id="addgrad">
-                        <div id="event_form">
-                            <div class="event">
-                                <form class="pure-form">
-                                    <fieldset class="pure-group" id="contact_info">
-                                        <label for="gradYear2">Graduation Year</label>
-                                        <input id="gradYear2" type="text" class="pure-input-1-2">
-                                        <label for="gradMajor2">Graduation Major</label>
-                                        <input id="gradMajor2" type="text" class="pure-input-1-2">
-                                        <button class=" btn-primary" type="button" data-toggle="collapse"
-                                            data-target="#addanother" aria-expanded="false" aria-controls="addanother">
-                                            Add
-                                        </button>
-                                        <br>
-                                        <div class="collapse" id="addanother">
-                                            <div id="event_form">
-                                                <div class="event">
-                                                    <form class="pure-form">
-                                                        <fieldset class="pure-group" id="contact_info">
-                                                            <label for="gradYear3">Graduation Year</label>
-                                                            <input id="gradYear3" type="text" class="pure-input-1-2">
-                                                            <label for="gradMajor3">Graduation Major</label>
-                                                            <input id="gradYMajor3" type="text" class="pure-input-1-2">
-                                                        </fieldset>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </fieldset>
-                                </form>
-                            </div>
-                        </div>
+                        <form class="pure-form">
+                            <fieldset class="pure-group degree">
+                                <label for="gradYear2">Graduation Year</label>
+                                <input id="gradYear2" type="text" class="pure-input-1-2">
+                                <label for="gradMajor2">Graduation Major</label>
+                                <input id="gradMajor2" type="text" class="pure-input-1-2">
+                                <button class=" btn-primary" type="button" data-toggle="collapse"
+                                    data-target="#addanother" aria-expanded="false" aria-controls="addanother">
+                                    Add
+                                </button>
+                                <br>
+                                <div class="collapse" id="addanother">
+                                    <form class="pure-form degree">
+                                        <fieldset class="pure-group degree">
+                                            <label for="gradYear3">Graduation Year</label>
+                                            <input id="gradYear3" type="text" class="pure-input-1-2">
+                                            <label for="gradMajor3">Graduation Major</label>
+                                            <input id="gradYMajor3" type="text" class="pure-input-1-2">
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </fieldset>
+                        </form>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class=" btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" id="register_btn" class=" btn-primary">Submit</button>
+                    <button type="submit" id="register_btn" class=" btn-primary">Submit Registration</button>
                 </div>
             </div>
         </div>
@@ -214,12 +210,8 @@
     <button class="btn" id=logout_btn>Log Out</button>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="/assets/javascript/index.js">
-    </script>
-
-
-
-
+    <script src="/assets/javascript/index.js"></script>
+    <script src="/assets/javascript/eventbrite.js"></script>
 </body>
 
 </html>
