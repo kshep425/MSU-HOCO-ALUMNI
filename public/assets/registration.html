@@ -26,16 +26,22 @@
 </head>
 
 <body style="background-color: skyblue;">
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed" style="left: 70%;">
-        <a class="pure-menu-heading" href="">DONATE</a>
-        <ul class="pure-menu-list">
-            <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Events</a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Registration</a></li>
-        </ul>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    Home
+                </li>
+                <li class="nav-item donatetab">
+                    <button type="button" class="btn btn-success">Donate</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container">
-        <h4>Registration Form</h4>
+        <h4>MSU Howard County Alumni Registration Form</h4>
         <form>
             <div class="container">
                 <h5>Login Info</h5>
@@ -201,6 +207,7 @@
             </div>
 
             <div class="container">
+                <h5>Member Registration Type</h5>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="member_type" id="inputCurrentLifeMemberIndividual"
                         value="Current Life Member Individual" data-marital_status="individual" checked>
@@ -248,7 +255,7 @@
             </div>
         </form>
 
-        <button class="btn" id=register_btn>Submit Registration</button>
+        <button class="btn btn-primary" id=register_btn>Submit Registration</button>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
