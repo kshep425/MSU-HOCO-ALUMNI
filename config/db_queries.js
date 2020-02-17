@@ -46,6 +46,7 @@ const db_queries = {
         Object.keys(request).forEach(key => {
             if (!request[key]) {
                 delete request[key];
+            } else {
                 fields.options.fields.push(key)
             }
         });
