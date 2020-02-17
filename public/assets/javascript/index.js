@@ -25,9 +25,9 @@ $(document).ready(() => {
             city: $("#inputCity").val(),
             state: $("#inputState option:selected").attr("value"),
             zip: $("#inputZip").val(),
-            occupation: $().val(),
-            member_type: $().val(),
-            member_marital_status: $().val(),
+            occupation: $("#inputOccupation").val(),
+            member_type: $("input[name=member_type]:checked").attr("value"),
+            member_marital_status: $("input[name=member_type]:checked").data("marital_status"),
             phone: $("#inputPhone").val(),
             prefix: $().val(),
             suffix: $().val()
@@ -83,7 +83,7 @@ $(document).ready(() => {
     $(function () {
         $('#datetimepicker1').datetimepicker();
     });
-    
+
     $(function () {
         $('#datetimepicker3').datetimepicker({
             format: 'LT'
