@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MSU-HOCO Alumni</title>
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css"
+        integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body style="background-color: skyblue;">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    Home
+                </li>
+                <li class="nav-item donatetab">
+                    <button type="button" class="btn btn-success">Donate</button>
+                </li>
+                <li class="nav-item">
+                    <a href="/registration">
+                        <button type="button" class="btn btn-primary register_btn">
+                            Register
+                        </button>
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <p style="position: relative;right: 40px;top: 10px;">Username</p>
+                <input style="position: relative;right: 30px;" id="login_username" autocomplete="username" type="text">
+                <p style="position: relative;right: 20px;top: 10px;">Password</p>
+                <input style="position: relative;right: 15px;" id="login_password" autocomplete="password"
+                    type="password">
+
+                <button class=" btn btn-primary" id=login_btn>Log In</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 style=" font-family: 'Bowlby One SC', cursive;" class="display-4">Morgan State University Howard County
+                Alumni</h1>
+            <p class="lead">A Place to keep up with our current events!</label>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis earum in provident incidunt enim.
+            Architecto officia nesciunt nam voluptatibus dolores dolor beatae nobis eum numquam repellat, nisi ipsam
+            quod labore.</p>
+    </div>
+
+    <hr style="background-color: orange;">
+
+    <div class="container">
+        <h3>Events</h3>
+
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://news.morgan.edu/wp-content/uploads/news-SPrating-660x330.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://pbs.twimg.com/profile_images/961705793191112704/y3QjIHWn_400x400.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.hfurrer.com/wp-content/uploads/2017/11/msu_north_garage_nite-2-web.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nesciunt accusantium
+            labore quasi, error atque velit vitae cumque aliquid? Distinctio sed ab beatae fuga minima facilis quia
+            ea cupiditate nobis?</p>
+
+    </div>
+
+    <div class="eventform" style="position: relative; left: 30%;">
+        <p>
+            <button style="position: relative;left: 15%;" class=" btn-primary" type="button" data-toggle="collapse"
+                data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Add New Event!
+            </button>
+
+        </p>
+        <div class="collapse" id="collapseExample">
+            <div id="event_form">
+                <div class="event">
+                    <form class="pure-form">
+                        <fieldset class="pure-group" id="contact_info">
+                            <label for="event_name">Event Name</label>
+                            <input id="event_name" type="text" class="pure-input-1-2">
+                            <label for="event_description">Event Description</label>
+                            <textarea id="event_description" class="pure-input-1-2"></textarea>
+                            <!-- <label for="event_date">Date</label>
+                            <input id="event_date" type="text" class="pure-input-1-2"> -->
+
+                            <!-- <div class="container"> -->
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="startlabel" for="datetimepicker1">Start Time and Date</label>
+                                        <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input event_start"
+                                                data-target="#datetimepicker1" />
+                                            <div class="input-group-append" data-target="#datetimepicker1"
+                                                data-toggle="datetimepicker">
+                                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="container"> -->
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label class="endlabel" for="datetimepicker3 ">End Time and Date</label>
+                                            <div class="input-group date2" id="datetimepicker3"
+                                                data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input event_end"
+                                                    data-target="#datetimepicker3" />
+                                                <div class="input-group-append" data-target="#datetimepicker3"
+                                                    data-toggle="datetimepicker">
+                                                    <div class="input-group-text"><i class="fa fa-calendar"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </fieldset>
+                        <br>
+                        <!-- button should send event info to an administrator for approval. User should get a notification saying event has been sent for approval -->
+                        <button id="event_submit_btn" type="submit"
+                            class="pure-button pure-input-1-2 pure-button-primary">Submit Event</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div id="post-event-container" style="border-color: orangered 25px;">
+            <h3>New Events</h3>
+            <h5>March 2, 2020 - Chapter Meeting</h5><button type="button" class="btn btn-dark">Tickets</button>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Attending
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Maybe Going
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Not Going
+                </label>
+            </div>
+
+            <hr>
+            <h5>March 7, 2020 - Adopt A Road On Benson Road</h5>
+            <p>Alternate date is March 14</p><button type="button" class="btn btn-dark">Tickets</button>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Attending
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Maybe Going
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Not Going
+                </label>
+            </div>
+            <hr>
+            <h5>April 4, 2020 - Day Party</h5><button type="button" class="btn btn-dark">Tickets</button>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Attending
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Maybe Going
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Not Going
+                </label>
+            </div>
+            <hr>
+            <h5>APRIL 6, 2020 - Chapter Meeting</h5>
+            <p> Present slate for Chapter elections</p><button type="button" class="btn btn-dark">Tickets</button>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Attending
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Maybe Going
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Not Going
+                </label>
+            </div>
+            <hr>
+            <h5>MAY 4, 2020 - Chapter Meeting</h5>
+            <p>Election of Officers / End of year committee reports</p><button type="button"
+                class="btn btn-dark">Tickets</button>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Attending
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Maybe Going
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Not Going
+                </label>
+            </div>
+            <hr>
+            <h5>JUNE 1, 2020 -Chapter Meeting</h5>
+            <p> Installation of officers in meeting room. Scholarship Awards Dinner in ballroom</p><button type="button"
+                class="btn btn-dark">Tickets</button>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Attending
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Maybe Going
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Not Going
+                </label>
+            </div>
+            <hr>
+            <h5>JUNE 6, 2020 - ADOPT A ROAD ON BENSON ROAD</h5>
+            <p>Alternate date June 13</p><button type="button" class="btn btn-dark">Tickets</button>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Attending
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Maybe Going
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Not Going
+                </label>
+            </div>
+            <hr>
+            <h5>JULY - Transition meeting date TBA</h5> <button type="button" class="btn btn-dark">Tickets</button>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Attending
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Maybe Going
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Not Going
+                </label>
+            </div>
+            <hr>
+            <h5>SEPTEMBER 12, 2020 ADOPT A ROAD</h5>
+            <p>Alternate date September 19, 2020</p><button type="button" class="btn btn-dark">Tickets</button>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Attending
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Maybe Going
+                </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" value="">Not Going
+                </label>
+            </div>
+
+
+        </div>
+    </div>
+    <hr style="background-color: orange;">
+
+    <a href="/registration">
+        <button type="button" class="btn btn-primary register_btn">
+            Register
+        </button>
+    </a>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="/assets/javascript/index.js"></script>
+    <script src="/assets/javascript/eventbrite.js"></script>
+</body>
+
+</html>

@@ -49,8 +49,6 @@
             event_info.show_remaining;
             event_info.capacity;
 
-            //
-            event.is_series
             console.log(event_info)
         }
     }
